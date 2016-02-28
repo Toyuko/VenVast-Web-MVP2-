@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+<title>VenVast</title>
+<!-- Bootstrap core CSS -->
+<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="assets/css/style.css" rel="stylesheet">
+
+<!-- styles needed for carousel slider -->
+<link href="assets/css/owl.carousel.css" rel="stylesheet">
+<link href="assets/css/owl.theme.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. -->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!-- include pace script for automatic web page progress bar  -->
+
+<script>
+    paceOptions = {
+      elements: true
+    };
+</script>
+<script src="assets/js/pace.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <div class="header">
+    <nav class="navbar navbar-site navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a href="index.html" class="navbar-brand logo logo-title"> 
+          <!-- Original Logo will be placed here  --> 
+          <span class="logo-icon"><img src="assets/img/logo.png" /></span></a></div>
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="glyphicon glyphicon-off"></i>  Signout</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user fa"></i><span>Touy Smith</span><i class=" icon-down-open-big fa"></i></a>
+              <ul class="dropdown-menu user-menu">
+                <li><a href="account-home.html"><i class="icon-home"></i> Main Profile </a></li>            
+                <li><a href="account-bookings.html"><i class="icon-th-thumb"></i> My Bookings </a></li>
+                <li><a href="account-events.html"><i class="icon-th-thumb"></i> My Events </a></li>
+              </ul>
+            </li>
+            <li class="postadd"><a class="btn btn-block   btn-border btn-post btn-danger" href="event-search.html">Create a Event</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse --> 
+      </div>
+      <!-- /.container-fluid --> 
+    </nav>
+  </div>
+  <!-- /.header -->
+  
+  <div class="main-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 page-sidebar">
+          <aside>
+           
+            <div class="inner-box">
+              <div class="user-panel-sidebar">
+                <div class="collapse-box">
+                  <h5 class="collapse-title no-border"> My Profile <a href="#MyClassified" data-toggle="collapse" class="pull-right"><i class="fa fa-angle-down"></i></a></h5>
+                  <div class="panel-collapse collapse in" id="MyClassified">
+                    <ul class="acc-list">
+                      <li><a href="account-home.html"><i class="icon-home"></i> Personal Home </a></li>
+                      <li><a href="account-edit.html"><i class="icon-pencil"></i> Edit Profile </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.collapse-box  -->
+                <div class="collapse-box">
+                  <h5 class="collapse-title"> My Events <a href="#MyEvents" data-toggle="collapse" class="pull-right"><i class="fa fa-angle-down"></i></a></h5>
+                  <div class="panel-collapse collapse in" id="MyEvents">
+                    <ul class="acc-list">
+                      <li><a class="active" href="event-search.html"><i class="icon-search"></i> Search Event </a></li>
+                      <li><a href="event-bookings.html"><i class="icon-th-thumb"></i> My Bookings </a></li>
+                      <li><a href="event-create.html"><i class="icon-plus"></i> Create an Event </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.collapse-box  -->
+                
+                
+              </div>
+            </div>
+            <!-- /.inner-box  --> 
+            
+            <div class="inner-box">
+                <h2 class="title-2 uppercase"><strong>Sponsored</strong></h2>
+                <img src="http://placehold.it/200x600&text=AD" />
+            </div>
+
+          </aside>
+        </div>
+        <!--/.page-sidebar-->
+        
+        <div class="col-sm-9 page-content">
+          <div class="inner-box">
+            <div class="row">
+              <div class="col-md-5 col-xs-4 col-xxs-12">
+                <h3 class="no-padding text-center-480 useradmin"><a href=""><img class="userImg" src="images/user.jpg" alt="user"> John Doe </a> </h3>
+              </div>
+              <div class="col-md-7 col-xs-8 col-xxs-12">
+                <div class="header-data text-center-xs"> 
+                  
+                  <!-- Traffic data -->
+                  <div class="hdata">
+                    <div class="mcol-left"> 
+                      <!-- Icon with red background --> 
+                      <i class="fa fa-eye ln-shadow"></i> </div>
+                    <div class="mcol-right"> 
+                      <!-- Number of visitors -->
+                      <p><a href="#">7000</a> <em>Visits</em></p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  
+                  <!-- revenue data -->
+                  <div class="hdata">
+                    <div class="mcol-left"> 
+                      <!-- Icon with green background --> 
+                      <i class="icon-th-thumb ln-shadow"></i> </div>
+                    <div class="mcol-right"> 
+                      <!-- Number of visitors -->
+                      <p><a href="#">12</a><em>Events</em></p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  
+                  <!-- revenue data -->
+                  <div class="hdata">
+                    <div class="mcol-left"> 
+                      <!-- Icon with blue background --> 
+                      <i class="fa fa-user ln-shadow"></i> </div>
+                    <div class="mcol-right"> 
+                      <!-- Number of visitors -->
+                      <p><a href="#">18</a> <em>Followers</em></p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Inner Box -->
+
+          <div class="inner-box">
+              <h5 class="list-title"><strong>Event Search</strong></h5>
+              <form>
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Find an event..." />
+                        <a href="#collapseSingleOne" data-toggle="collapse" class="collapsed">Advanced Search</a>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12">
+                        <input type="submit" class="btn btn-block btn-primary" value="Search"/>
+                    </div>
+                </div>
+
+                <div class="row collapse" id="collapseSingleOne" style="height: 0px;">
+
+                  <div class="col-md-12 col-lg-12">
+                     <hr />
+                     <h4>By Type</h4>
+                     <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                           <input type="radio" name="event_types" value="all"> All
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="class"> Class
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="seminar"> Seminar
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Conference"> Conference
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Other"> Other
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Expo"> Expo
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Networking"> Networking
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Festival"> Festival
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Perfomance"> Perfomance
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Party"> Party
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Tour"> Tour
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Gala"> Gala
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-sm-6">
+                        <input type="radio" name="event_types" value="Attraction"> Attraction
+                        </div>
+                      </div>
+                      <br />
+                      <h4>By Date</h4>
+                      <input id="date" class="form-control" name="date" type="date" />
+                  </div>
+                </div>
+              </form>
+          </div><!-- End inner-box-->
+
+          <!-- Results Pane -->
+          <div class="inner-box">
+              <h5 class="list-title"><strong>Search Results</strong> <small class="pull-right">17 events match your criteria</small></h5>
+
+              <div class="search-item" style="background:url('http://djpicshd.com/wp-content/uploads/2014/03/Kazantip-2014-Ukraine-Promo-Gallery-2013-event-HD-Wallpaper-Photo-Party-Pics-most-amazing-Laser-Show-beautiful-dancers.jpg');">
+                <a href="#">More Details / Book Spot</a>
+                  <div class="item-details">
+                    <h2 class="item-title">Sample Event</h2>
+                    <h2 class="item-date">03 MAR 2016</h2>
+                    <h2 class="item-moreinfo">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, tincidunt vel porta et, efficitur eu justo. Sed non eros non arcu commodo congue sit amet non lectus.
+                    </h2>
+                  </div>
+              </div>
+
+
+              <div class="search-item" style="background:url('http://www.panida.org/wp-content/uploads/2014/07/Panida_from-balcony-AllerGale-1920x1080px-v3.jpg');">
+                <a href="#">More Details / Book Spot</a>
+                  <div class="item-details">
+                    <h2 class="item-title">Sample Event</h2>
+                    <h2 class="item-date">03 MAR 2016</h2>
+                    <h2 class="item-moreinfo">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, tincidunt vel porta et, efficitur eu justo. Sed non eros non arcu commodo congue sit amet non lectus.
+                    </h2>
+                  </div>
+              </div>
+
+
+              <div class="search-item" style="background:url('http://atlconventioncenter.com/img/default/002.jpg');">
+                <a href="#">More Details / Book Spot</a>
+                  <div class="item-details">
+                    <h2 class="item-title">Sample Event</h2>
+                    <h2 class="item-date">03 MAR 2016</h2>
+                    <h2 class="item-moreinfo">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, tincidunt vel porta et, efficitur eu justo. Sed non eros non arcu commodo congue sit amet non lectus.
+                    </h2>
+                  </div>
+              </div>
+
+              <div class="search-item" style="background:url('http://www.latourelle.com/images/display_photos/weddings1.jpg');">
+                <a href="#">More Details / Book Spot</a>
+                  <div class="item-details">
+                    <h2 class="item-title">Sample Event</h2>
+                    <h2 class="item-date">03 MAR 2016</h2>
+                    <h2 class="item-moreinfo">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex enim, tincidunt vel porta et, efficitur eu justo. Sed non eros non arcu commodo congue sit amet non lectus.
+                    </h2>
+                  </div>
+              </div>
+
+
+
+          </div>
+
+
+      </div>
+      <!--/.row--> 
+    </div>
+    <!--/.container--> 
+  </div>
+  <!-- /.main-container -->
+  
+  <div class="footer" id="footer">
+    <div class="container">
+      <ul class=" pull-left navbar-link footer-nav">
+        <li><a href="index.html"> Home </a> <a href="about-us.html"> About us </a> <a href="services.html"> Services </a> <a href="privacy.html"> Privacy Policy </a> <a href="contact.html"> Contact us </a> 
+      </ul>
+      <ul class=" pull-right navbar-link footer-nav">
+        <li> &copy; 2016 VenVast </li>
+      </ul>
+    </div>
+    
+  </div>
+  <!--/.footer--> 
+</div>
+<!-- /.wrapper --> <!-- Le javascript
+================================================== --> 
+
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script><script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+
+<!-- include carousel slider plugin  --> 
+<script src="assets/js/owl.carousel.min.js"></script>
+
+
+<!-- include equal height plugin  -->
+<script src="assets/js/jquery.matchHeight-min.js"></script>
+
+<!-- include jquery list shorting plugin plugin  -->
+<script src="assets/js/hideMaxListItem.js"></script>
+
+<!-- include jquery.fs plugin for custom scroller and selecter  --> 
+<script src="assets/plugins/jquery.fs.scroller/jquery.fs.scroller.js"></script>
+<script src="assets/plugins/jquery.fs.selecter/jquery.fs.selecter.js"></script>
+<!-- include custom script for site  --> 
+<script src="assets/js/script.js"></script>
+</body>
+</html>

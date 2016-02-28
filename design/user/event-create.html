@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+<title>VenVast</title>
+<!-- Bootstrap core CSS -->
+<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="assets/css/style.css" rel="stylesheet">
+
+<!-- styles needed for carousel slider -->
+<link href="assets/css/owl.carousel.css" rel="stylesheet">
+<link href="assets/css/owl.theme.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. -->
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!-- include pace script for automatic web page progress bar  -->
+<style>
+#map{width:100%; height:300px;}
+</style>
+
+<script>
+    paceOptions = {
+      elements: true
+    };
+</script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+ <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#910000"},{"visibility":"on"}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.6700, -73.9400),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
+
+<script src="assets/js/pace.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <div class="header">
+    <nav class="navbar navbar-site navbar-default" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <a href="index.html" class="navbar-brand logo logo-title"> 
+          <!-- Original Logo will be placed here  --> 
+          <span class="logo-icon"><img src="assets/images/img/logo.png" /></span></a></div>
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="glyphicon glyphicon-off"></i>  Signout</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user fa"></i><span>Touy Smith</span><i class=" icon-down-open-big fa"></i></a>
+              <ul class="dropdown-menu user-menu">
+                <li><a href="account-home.html"><i class="icon-home"></i> Main Profile </a></li>            
+                <li><a href="account-bookings.html"><i class="icon-th-thumb"></i> My Bookings </a></li>
+                <li><a href="account-events.html"><i class="icon-th-thumb"></i> My Events </a></li>
+              </ul>
+            </li>
+            <li class="postadd"><a class="btn btn-block   btn-border btn-post btn-danger" href="event-search.html">Find an Event</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse --> 
+      </div>
+      <!-- /.container-fluid --> 
+    </nav>
+  </div>
+  <!-- /.header -->
+  
+  <div class="main-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 page-sidebar">
+          <aside>
+           
+            <div class="inner-box">
+              <div class="user-panel-sidebar">
+                <div class="collapse-box">
+                  <h5 class="collapse-title no-border"> My Profile <a href="#MyClassified" data-toggle="collapse" class="pull-right"><i class="fa fa-angle-down"></i></a></h5>
+                  <div class="panel-collapse collapse in" id="MyClassified">
+                    <ul class="acc-list">
+                      <li><a href="account-home.html"><i class="icon-home"></i> Personal Home </a></li>
+                      <li><a href="account-edit.html"><i class="icon-pencil"></i> Edit Profile </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.collapse-box  -->
+                <div class="collapse-box">
+                  <h5 class="collapse-title"> My Events <a href="#MyEvents" data-toggle="collapse" class="pull-right"><i class="fa fa-angle-down"></i></a></h5>
+                  <div class="panel-collapse collapse in" id="MyEvents">
+                    <ul class="acc-list">
+                      <li><a href="event-search.html"><i class="icon-search"></i> Search Event </a></li>
+                      <li><a href="event-bookings.html"><i class="icon-th-thumb"></i> My Bookings </a></li>
+                      <li><a class="active" href="event-create.html"><i class="icon-plus"></i> Find a Event </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.collapse-box  -->
+                
+                
+              </div>
+            </div>
+            <!-- /.inner-box  --> 
+            
+            <div class="inner-box">
+                <h2 class="title-2 uppercase"><strong>Sponsored</strong></h2>
+                <img src="http://placehold.it/200x600&text=AD" />
+            </div>
+
+          </aside>
+        </div>
+        <!--/.page-sidebar-->
+        
+        <div class="col-sm-9 page-content">
+          <div class="inner-box">
+            <div class="row">
+              <div class="col-md-5 col-xs-4 col-xxs-12">
+                <h3 class="no-padding text-center-480 useradmin"><a href=""><img class="userImg" src="images/user.jpg" alt="user"> John Doe </a> </h3>
+              </div>
+              <div class="col-md-7 col-xs-8 col-xxs-12">
+                <div class="header-data text-center-xs"> 
+                  
+                  <!-- Traffic data -->
+                  <div class="hdata">
+                    <div class="mcol-left"> 
+                      <!-- Icon with red background --> 
+                      <i class="fa fa-eye ln-shadow"></i> </div>
+                    <div class="mcol-right"> 
+                      <!-- Number of visitors -->
+                      <p><a href="#">7000</a> <em>Visits</em></p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  
+                  <!-- revenue data -->
+                  <div class="hdata">
+                    <div class="mcol-left"> 
+                      <!-- Icon with green background --> 
+                      <i class="icon-th-thumb ln-shadow"></i> </div>
+                    <div class="mcol-right"> 
+                      <!-- Number of visitors -->
+                      <p><a href="#">12</a><em>Events</em></p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  
+                  <!-- revenue data -->
+                  <div class="hdata">
+                    <div class="mcol-left"> 
+                      <!-- Icon with blue background --> 
+                      <i class="fa fa-user ln-shadow"></i> </div>
+                    <div class="mcol-right"> 
+                      <!-- Number of visitors -->
+                      <p><a href="#">18</a> <em>Followers</em></p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Inner Box -->
+
+          <div class="inner-box">
+            <h5 class="list-title"><strong>Create Event</strong></h5>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#MainInfo" data-toggle="tab">General Information</a></li>
+                <li><a href="#Location" data-toggle="tab">Location</a></li>
+                <li><a href="#Tickets" data-toggle="tab">Tickets / Booking</a></li>
+                <li><a href="#Interests" data-toggle="tab">Interest / Category</a></li>
+              </ul>
+
+              <div class="tab-content">
+                <br />
+                <div class="tab-pane active" id="MainInfo">
+                      <h5>Event Title: </h5>
+                      <input type="text" class="form-control" name="eventTitle" placeholder="Event Title"/><br />
+                      <div class="row">
+                          <div class="col-md-6 col-lg-6 col-sm-6">
+                            <h5>Event Date: </h5>
+                            <input type="date" class="form-control" name="eventData" />
+                          </div>
+                          <div class="col-md-6 col-lg-6 col-sm-6">
+                            <h5>Event Banner: </h5>
+                            <input type="file" name="eventPhoto"/>
+                          </div>
+                      </div><br />
+                      
+                      <h5>Event Details: </h5>
+                      <textarea rows="10" class="form-control" placeholder="Give us more info on your event" name="eventDescription"></textarea>
+                </div>
+                <div class="tab-pane" id="Location">
+                       <div id="map"></div><br />
+                       <textarea class="form-control" placeholder="Full Address"></textarea>
+                </div>
+                <div class="tab-pane" id="Tickets">
+
+                      <input type="checkbox" name="eventFree" value="1"/> Attendance is Free
+                      <hr />
+                      <table class="table table-striped">
+                          <tr>
+                              <th>Ticket Name</th>
+                              <th>Ticket Cost</th>
+                              <th>Ticket Inventory</th>
+                          </tr>
+
+                          <tr>
+                              <td><input type="text" class="form-control" name="ticketName1" /></td>
+                              <td><input type="text" class="form-control" name="ticketCost1" /></td>
+                              <td><input type="text" class="form-control" name="ticketInventory1" /></td>
+                          </tr>
+
+                          <tr>
+                              <td><input type="text" class="form-control" name="ticketName2" /></td>
+                              <td><input type="text" class="form-control" name="ticketCost2" /></td>
+                              <td><input type="text" class="form-control" name="ticketInventory2" /></td>
+                          </tr>
+
+                          <tr>
+                              <td><input type="text" class="form-control" name="ticketName2" /></td>
+                              <td><input type="text" class="form-control" name="ticketCost2" /></td>
+                              <td><input type="text" class="form-control" name="ticketInventory2" /></td>
+                          </tr>
+                      </table>
+                </div>
+
+                <div class="tab-pane" id="Interests">
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Automotive" name="Automotive" value="Automotive">
+                          <label for="Automotive">Automotive</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Business" name="Business" value="Business">
+                          <label for="Business">Business</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Health" name="Health" value="Health">
+                          <label for="Health">Health</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Technology" name="Technology" value="Technology">
+                          <label for="Technology">Technology</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Science" name="Science" value="Science">
+                          <label for="Science">Science</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Food and Drink" name="Food and Drink" value="Food and Drink">
+                          <label for="Food and Drink">Food and Drink</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Family" name="Family" value="Family">
+                          <label for="Family">Family</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Education" name="Education" value="Education">
+                          <label for="Education">Education</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Fashion" name="Fashion" value="Fashion">
+                          <label for="Fashion">Fashion</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Community" name="Community" value="Community">
+                          <label for="Community">Community</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Sports" name="Sports" value="Sports">
+                          <label for="Sports">Sports</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Travel" name="Travel" value="Travel">
+                          <label for="Travel">Travel</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Outdoor" name="Outdoor" value="Outdoor">
+                          <label for="Outdoor">Outdoor</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Hobbies" name="Hobbies" value="Hobbies">
+                          <label for="Hobbies">Hobbies</label>
+                        </div>
+
+                        <div class="interest-check" style="background:url('http://placehold.it/200x100');">
+                          <input type="checkbox" id="Meeting" name="Meeting" value="Meeting">
+                          <label for="Meeting">Meeting</label>
+                        </div>
+                </div>
+               
+              </div> <!-- /.tab content -->
+              <br />
+              <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create Event" />
+          </div>
+      </div>
+      <!--/.row--> 
+    </div>
+    <!--/.container--> 
+  </div>
+  <!-- /.main-container -->
+  
+  <div class="footer" id="footer">
+    <div class="container">
+      <ul class=" pull-left navbar-link footer-nav">
+        <li><a href="index.html"> Home </a> <a href="about-us.html"> About us </a> <a href="services.html"> Services </a> <a href="privacy.html"> Privacy Policy </a> <a href="contact.html"> Contact us </a> 
+      </ul>
+      <ul class=" pull-right navbar-link footer-nav">
+        <li> &copy; 2016 VenVast </li>
+      </ul>
+    </div>
+    
+  </div>
+  <!--/.footer--> 
+</div>
+<!-- /.wrapper --> <!-- Le javascript
+================================================== --> 
+
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"> </script><script src="assets/bootstrap/js/bootstrap.min.js"></script> 
+
+<!-- include carousel slider plugin  --> 
+<script src="assets/js/owl.carousel.min.js"></script>
+
+
+<!-- include equal height plugin  -->
+<script src="assets/js/jquery.matchHeight-min.js"></script>
+
+<!-- include jquery list shorting plugin plugin  -->
+<script src="assets/js/hideMaxListItem.js"></script>
+
+<!-- include jquery.fs plugin for custom scroller and selecter  --> 
+<script src="assets/plugins/jquery.fs.scroller/jquery.fs.scroller.js"></script>
+<script src="assets/plugins/jquery.fs.selecter/jquery.fs.selecter.js"></script>
+<!-- include custom script for site  --> 
+<script src="assets/js/script.js"></script>
+</body>
+</html>
